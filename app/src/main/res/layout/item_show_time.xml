@@ -1,0 +1,20 @@
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_selector"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tvShowTime"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="@string/app_name" />
+
+    </RelativeLayout>
+
+</layout>
