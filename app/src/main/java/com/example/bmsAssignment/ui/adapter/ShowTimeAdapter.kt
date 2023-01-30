@@ -1,7 +1,6 @@
 package com.example.bmsAssignment.ui.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bmsAssignment.base.commonContract.RecyclerviewClickListener
@@ -38,8 +37,8 @@ class ShowTimeAdapter(private val venue: Venue,  listener: RecyclerviewClickList
             binding.root.setOnClickListener {
                 selectedPosition = adapterPosition
                 notifyDataSetChanged()
-                mVenue.showTimes = mutableListOf<ShowTimes?>().also { it.add(showTime) }
-                mListener.recyclerviewClickListener(mVenue)
+                val selectedShowList = mutableListOf<ShowTimes?>().also { it.add(showTime) }
+                mListener.recyclerviewClickListener(Venue(mVenue.name, mVenue.showDate, selectedShowList))
             }
         }
     }
